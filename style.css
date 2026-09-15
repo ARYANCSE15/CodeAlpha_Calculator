@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.calculator {
+    width: 360px;
+
+    padding: 20px;
+
+    border-radius: 25px;
+
+    background: #111827;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+/* Display */
+
+.display {
+    min-height: 120px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 18px;
+
+    background: #020617;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#previous-display {
+    min-height: 25px;
+
+    color: #94a3b8;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+#current-display {
+    color: white;
+
+    font-size: 42px;
+    font-weight: 600;
+}
+
+/* Buttons */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+button {
+    height: 65px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    color: white;
+
+    background: #1f2937;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.1s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    background: #374151;
+
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+/* Function buttons */
+
+.function {
+    background: #475569;
+}
+
+.function:hover {
+    background: #64748b;
+}
+
+/* Operators */
+
+.operator {
+    background: #2563eb;
+}
+
+.operator:hover {
+    background: #3b82f6;
+}
+
+/* Equal button */
+
+.equals {
+    background: #16a34a;
+}
+
+.equals:hover {
+    background: #22c55e;
+}
+
+/* Zero button */
+
+.zero {
+    grid-column: span 2;
+}
+
+/* Keyboard information */
+
+.keyboard-info {
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+/* Mobile */
+
+@media (max-width: 420px) {
+
+    .calculator {
+        width: 92%;
+        padding: 16px;
+    }
+
+    button {
+        height: 60px;
+    }
+
+    #current-display {
+        font-size: 36px;
+    }
+}
